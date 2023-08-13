@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/chalk_backgroung2"
+    tools:context=".CurrencyActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/tittlearea"
+        android:layout_weight="0.7">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/currency_tittle"
+            android:fontFamily="@font/drift"
+            android:textColor="#C69351"
+            android:padding="10dp"
+            android:textSize="70sp"
+            android:textAlignment="center" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/workarea"
+        android:layout_weight="0.3">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:id="@+id/inputarea">
+
+                <TextView
+                    android:id="@+id/label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="15dp"
+                    android:text="@string/text1"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/aclonica"
+                    android:textColor="#C0FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.496"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.138" />
+
+                <EditText
+                    android:id="@+id/input"
+                    android:layout_width="166dp"
+                    android:layout_height="47dp"
+                    android:layout_marginStart="36dp"
+                    android:ems="10"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="#C0FFFFFF"
+                    android:backgroundTint="#C0FFFFFF"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.851" />
+
+                <Spinner
+                    android:id="@+id/droplist"
+                    android:layout_width="157dp"
+                    android:layout_height="49dp"
+                    android:backgroundTint="#FAF9F9"
+                    android:background="#FAFAFA"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.423"
+                    app:layout_constraintStart_toEndOf="@+id/input"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.851" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:id="@+id/resultarea">
+
+                <Spinner
+                    android:id="@+id/droplist2"
+                    android:layout_width="157dp"
+                    android:layout_height="49dp"
+                    android:background="#FAFAFA"
+                    android:backgroundTint="#FAF9F9"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.085" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="354dp"
+                    android:layout_height="42dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text="@string/result"
+                    android:textAlignment="center"
+                    android:textColor="#ED4A4A"
+                    android:textSize="20sp"
+                    android:visibility="invisible"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.491"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.497" />
+
+                <TextView
+                    android:id="@+id/result"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text=" "
+                    android:textAlignment="center"
+                    android:textColor="#ED4A4A"
+                    android:textSize="30sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.771" />
+
+                <TextView
+                    android:id="@+id/date"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:fontFamily="@font/aclonica"
+                    android:text=" "
+                    android:textAlignment="center"
+                    android:textColor="#ED4A4A"
+                    android:textSize="15sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.926" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/buttonPanel"
+        android:layout_weight="0.7">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:padding="20dp">
+
+            <ImageButton
+                android:id="@+id/clear"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:layout_gravity="left"
+                android:background="@drawable/cleaner_button_transparent" />
+
+            <ImageButton
+                android:id="@+id/home"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:background="@drawable/home" />
+
+            <ImageButton
+                android:id="@+id/update"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:layout_width="125dp"
+                android:layout_height="75dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerInside"
+                android:layout_gravity="end"
+                android:background="@drawable/check" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
